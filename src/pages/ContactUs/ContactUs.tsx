@@ -4,13 +4,12 @@ import TabContent from "../../components/Tabs/components/TabContent";
 // import "../../styles/main.scss";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { contactUsImg, heroImg } from "../../assets";
-import { customIcon } from "../../assets/icons/customIcons";
+import { contactUsNiaGroup } from "../../assets";
 import TabButtons from "../../components/Tabs/components/TabButtons";
 import { HeadingTitle } from "../../components/text";
 // import HeroImage from "../Services/components/HeroImage";
 import FormData from "./components/FormData/FormData";
-
+import { customIcon } from "../../assets/icons/customIcon";
 interface ContactInfo {
   id: string;
   adds: string;
@@ -97,7 +96,7 @@ const ContactUs = () => {
     [setSelectedTabIndex]
   );
   const imgSection = {
-    img: heroImg,
+    img: contactUsNiaGroup.cover,
     alt: "software service",
     headerText: t("components.contactUs"),
   };
@@ -211,7 +210,7 @@ const ContactUs = () => {
         <div className="  container shadowEffect flex flex-col w-[96.8%] lg:w-[96.5%] min-h-[490px]    mx-auto items-start   rounded-xl  py-[32px] md:py-[57px] xl:py-[75px]">
           <div className=" flex w-full justify-center lg:justify-between mx-auto">
             <div className="max-lg:hidden w-[41.8%] ">
-              <img src={contactUsImg} alt="contact us" />
+              <img src={contactUsNiaGroup.contacts} alt="contact us" />
             </div>
             <div className="w-full md:w-[55%] relative ">
               <div className="text-center">

@@ -1,23 +1,20 @@
 import { useRoutes } from "react-router-dom";
 
 import { MasterLayout } from "../layout";
-import { HomePage } from "../pages";
 import ContactUs from "../pages/ContactUs";
-
+import Home from "../pages/niaGroup/page/home/Home";
+import { NiaGroupLayout } from "../pages/niaGroup/layout";
 const useHandleRoutes = () => {
   const routes = useRoutes([
     {
       path: "/",
-      element: <MasterLayout />,
+      element: <NiaGroupLayout />,
       children: [
-        {
-          path: "/",
-          element: <HomePage />,
-        },
-
+        { path: "/", element: <Home /> },
         { path: "contact-us", element: <ContactUs /> },
       ],
     },
+    
   ]);
   return { routes };
 };

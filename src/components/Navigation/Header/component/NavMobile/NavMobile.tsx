@@ -1,23 +1,13 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { FC, useRef, useState } from "react";
-import { BiHomeSmile, BiUser } from "react-icons/bi";
-import { FiSettings, FiShoppingCart } from "react-icons/fi";
-import { HiOutlineChatBubbleBottomCenterText } from "react-icons/hi2";
 import { useClickAway } from "react-use";
-import { logo } from "../../../../../assets";
-import Icon from "../../../../../assets/icons/Icons";
-import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-  Image,
-} from "@chakra-ui/react";
-import Button from "../../../../Button";
-import { Box, ChevronDownIcon } from "lucide-react";
+import { navLogo } from "../../../../../assets";
+
+import { Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import Icon from "../../../../../assets/icons/Icons";
+import Button from "../../../../Button";
 import LanguageSwitcher from "../../../LanguageSwitcher/LanguageSwitcher ";
 
 interface NavMobileProps {
@@ -78,15 +68,16 @@ const NavMobile: FC<NavMobileProps> = ({ isVisible, setOpen, isOpen }) => {
 
   return (
     <motion.nav
+      //fixed top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-xl bg-white/40
       initial={{ y: 0 }}
       animate={{ y: isVisible ? 0 : [-35, -50, -100, -100] }}
       transition={{ duration: 0.2, type: "spring" }}
-      className={`lg:hidden flex justify-between w-screen h-[50px] md:h-20 fixed top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-xl bg-white/40 transition-transform duration-300 ${
+      className={`lg:hidden flex justify-between w-screen h-[50px] md:h-20   transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="w-[45px] md:w-[70px] h-auto left-0 mx-10 translate-y-[5px]">
-        <img src={logo} alt="Logo" />
+        <img src={navLogo} alt="Logo" />
       </div>
       <aside className="transform ">
         <button

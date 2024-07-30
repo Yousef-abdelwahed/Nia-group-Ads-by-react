@@ -3,8 +3,7 @@
   outline: none;
   list-style: none;
   box-sizing: border-box;
-  word-wrap: break-word;
-  font-weight: 500;
+  
 }
 section{
   background-color: #FFFDFB;
@@ -12,7 +11,7 @@ section{
 }
 :root {
   --primary-color: #EF7D00;
-  --secondary-color: #e2e8f0;
+  --secondary-color: #F18B1C;
   --dark-color:#131312;
 }
 
@@ -29,6 +28,10 @@ body {
   position: relative;
   scroll-behavior: smooth;
 background-color: #fafafa; 
+
+word-wrap: break-word;
+font-weight: 500;
+
 
 }
 h2{

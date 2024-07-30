@@ -1,3 +1,3 @@
-import HomePage from "./Home";
+import HomePage from "./niaGroup/layout/HomeLayout";
 
 export { HomePage };

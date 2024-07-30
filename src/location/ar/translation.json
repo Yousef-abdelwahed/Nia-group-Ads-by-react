@@ -1,7 +1,7 @@
 {
   "components":{"readMore":"أقرأ المزيد","contactUs":"تواصل معنا"},
   "location":{"sa":"السعودية","eg":"مصر"}
-  ,"nav":{"pages":{"home":"الصفحة الرئيسية","aboutUs":" نبذة عن ","ourServices":"الخدمات","ourTeam":"فريقنا"}},
+  ,"nav":{"pages":{"home":"الصفحة الرئيسية","aboutUs":"نبذة عن","ourServices":"الخدمات","ourTeam":"فريقنا"}},
   "home":{
   "slider":{"firstSlider":{"header":"أبدعنا في ظهور الأنشطة التجارية وابتكرنا كافة الحلول والتصاميم بواسطه",
   "subHeader":"نخبه"},"secondSlider":{"header":"أبدعنا في ظهور الأنشطة التجارية وابتكرنا كافة الحلول والتصاميم بواسطه","subHeader":"نخبه"}},

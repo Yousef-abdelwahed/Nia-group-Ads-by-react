@@ -1,42 +1,37 @@
-import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Center, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import { customIcon } from "../../../assets/icons/customIcons";
+import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import Button from "../../Button";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher ";
-import { useTranslation } from "react-i18next";
 
 interface IProps {
   type?: "header" | "footer" | "mobile";
   classes?: string;
 }
 
-const getRoutesPages = (t: Function) => [
-  { name: t("nav.pages.home"), url: "/", icon: "" },
-  {
-    name: "nia" + t("nav.pages.aboutUs") + "",
-    url: "about-us",
-    icon: customIcon.rightArrowFooter,
-  },
-  { name: t("nav.pages.ourServices"), url: "services", icon: "" },
-  {
-    name: t("nav.pages.ourTeam"),
-    url: "/",
-    icon: customIcon.rightArrowFooter,
-  },
-];
 const className =
   "font-medium lg:text-sm xl:text-xl 2xl:mx-4  flex flex-row items-center lg:mx-2   capitalize hover:text-orange-400 pt-3 transition bg-red-500";
 
 const NavItems = ({ type = "header" }) => {
-  const { t } = useTranslation();
-  const routes = getRoutesPages(t);
+  const { t, i18n } = useTranslation();
 
   const location = useLocation();
+  const getRoutesPages = (t: Function) => [
+    { name: t("nav.pages.home"), url: "/", icon: "" },
+    {
+      name: t("nav.pages.aboutUs") + (i18n.language === "ar" ? " Nia" : ""),
+      url: "about-us",
+    },
+    { name: t("nav.pages.ourServices"), url: "services", icon: "" },
+    {
+      name: t("nav.pages.ourTeam"),
+      url: "/",
+    },
+  ];
+  const routes = getRoutesPages(t);
+
   const linkPages = routes?.map((item, index) => {
-    const { url, name, icon } = item;
+    const { url } = item;
 
     const isActive = location.pathname === url;
     return (
@@ -57,7 +52,7 @@ const NavItems = ({ type = "header" }) => {
             }`
           }
         >
-          {type === "footer" && icon} {item.name}
+          {item.name}
         </a>
       </li>
     );
@@ -84,9 +79,7 @@ const NavItems = ({ type = "header" }) => {
           >
             {t("components.contactUs")}
           </Link>
-          <div className="inline-block mx-2  items-center my-auto">
-            {customIcon.arrowsIcon.contactBtn}
-          </div>
+          <div className="inline-block mx-2  items-center my-auto"></div>
         </Button>
       </div>
     </>

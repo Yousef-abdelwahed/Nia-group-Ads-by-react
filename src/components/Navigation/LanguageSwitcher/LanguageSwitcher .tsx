@@ -1,7 +1,7 @@
 import React from "react";
-import { customIcon } from "../../../assets/icons/customIcons";
 import { useTranslation } from "react-i18next";
 import Button from "../../Button";
+import { customIcon } from "../../../assets/icons/customIcon";
 
 interface IProps {
   classes: string;

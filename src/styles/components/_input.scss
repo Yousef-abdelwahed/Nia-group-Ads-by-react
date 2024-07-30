@@ -1,0 +1,25 @@
+.input-wrapper { 
+    position: relative; 
+    display: inline-block; 
+} 
+
+.input-wrapper input { 
+    padding-right: 40px; 
+    border-radius: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+} 
+
+.input-wrapper button { 
+    position: absolute; 
+    top: 0; 
+    border-radius: 10px;
+ 
+    right: 0; 
+    padding:10px 40px;
+    color: white;
+    border: none; 
+    background-color: transparent; 
+    cursor: pointer;
+    background-color: #EF7D00;
+} 

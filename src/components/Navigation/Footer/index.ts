@@ -1,1 +1,3 @@
-export {default} from "./Footer"
+import NiaGroupFooter from "./NiaGroupFooter/NiaGroupFooter";
+
+export { NiaGroupFooter };

@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import { FC } from "react";
-import { logo, navBg, navImg } from "../../../../../assets";
-import NavItems from "../../../NavLinks/NavLinks";
-import { customIcon } from "../../../../../assets/icons/customIcons";
 import { useTranslation } from "react-i18next";
+import { navLogo } from "../../../../../assets";
+import NavItems from "../../../NavLinks/NavLinks";
 
 interface IProp {
   isVisible: boolean;
@@ -22,7 +21,7 @@ const NavDeskTop: FC<IProp> = ({ isVisible }) => {
     >
       <div className=" flex ">
         <div className={` ${i18n.language !== "ar" ? "" : ""} `}>
-          <img src={logo} className="2xl:w-[70%] h-auto" alt="" />
+          <img src={navLogo} className="2xl:w-[70%] h-auto" alt="" />
         </div>
         <NavItems />
       </div>

@@ -44,6 +44,7 @@ theme: {
       secondary: "var(--secondary-color)",
       dark:"var(--dark-color)",
     },
+    
     backgroundImage: {
       'custom-hero': "linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url('<path-to-image>')",
     },
