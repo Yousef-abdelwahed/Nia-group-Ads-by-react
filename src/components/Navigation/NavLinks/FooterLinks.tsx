@@ -8,19 +8,6 @@ interface IProps {
   classes?: string;
 }
 
-// const className = "font-medium xl:text-[20px] py-3 transition ";
-
-// const NavigationBar: React.FC = () => {
-//   return (
-//     <>
-//       <NavItem to="#home" text="home" />
-//       <NavItem to="#about-us" text="about us" />
-//       <NavItem to="#services" text="services" />
-//       <NavItem to="#our-works" text="our works" />
-//       <NavItem to="#news" text="news" />
-//     </>
-//   );
-// };
 const routes = [
   { name: "Home", url: "/" },
   { name: "about us", url: "about-us" },

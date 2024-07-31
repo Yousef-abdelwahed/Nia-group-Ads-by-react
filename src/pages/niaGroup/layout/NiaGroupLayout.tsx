@@ -7,7 +7,7 @@ const NiaGroupLayout = () => {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <main
         className={`overflow-hidden ${
           i18n.language === "ar" ? "rtl" : "ltr"

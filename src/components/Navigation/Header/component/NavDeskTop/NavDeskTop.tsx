@@ -15,7 +15,7 @@ const NavDeskTop: FC<IProp> = ({ isVisible }) => {
       initial={{ y: 0 }}
       animate={{ y: isVisible ? 0 : [-35, -50, -100, -140] }}
       transition={{ duration: 0.2, type: "spring" }}
-      className={`max-lg:hidden  container pt-6  ${
+      className={`max-lg:hidden  container pt-6  absolute   top-0 left-0 right-0 mt-4 z-50 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       } ${i18n.language === "ar" ? "rtl" : "ltr"}`}
     >

@@ -10,7 +10,7 @@ interface IProps {
 }
 
 const className =
-  "font-medium lg:text-sm xl:text-xl 2xl:mx-4  flex flex-row items-center lg:mx-2   capitalize hover:text-orange-400 pt-3 transition bg-red-500";
+  "font-medium lg:text-sm xl:text-xl 2xl:mx-4  flex flex-row items-center lg:mx-2   capitalize hover:text-orange-400 pt-3 transition ";
 
 const NavItems = ({ type = "header" }) => {
   const { t, i18n } = useTranslation();
@@ -70,7 +70,7 @@ const NavItems = ({ type = "header" }) => {
       >
         {linkPages}
       </ul>
-      <div className="ms-auto my-auto  font-medium flex ">
+      <div className="ms-auto my-auto  font-medium flex me-10">
         <LanguageSwitcher classes="text-dark" />
         <Button className="flex flex-row items-center  justify-center">
           <Link
