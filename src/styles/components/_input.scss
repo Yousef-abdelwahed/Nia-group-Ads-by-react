@@ -1,6 +1,7 @@
 .input-wrapper { 
     position: relative; 
     display: inline-block; 
+    box-shadow: 1px 2px 5px 0px rgba(244, 168, 85, 0.15);
 } 
 
 .input-wrapper input { 
@@ -14,9 +15,9 @@
     position: absolute; 
     top: 0; 
     border-radius: 10px;
- 
+    
     right: 0; 
-    padding:10px 40px;
+    padding:10px 10%;
     color: white;
     border: none; 
     background-color: transparent; 

@@ -11,32 +11,34 @@ const Home = () => {
   console.log(data.ourTeamData);
   return (
     <div className=" relative  ">
-      <section className="main_container bg-stone-600  overflow-hidden  relative ">
-        <div className="main_container-left absolute  top-[50%] transform translate-y-[-100%] ">
-          <h1 className="main_container-header capitalize break-words	font-bold text-center  text-[28px] md:text-[40px] lg:text-[70px] max-w-[597px] ">
+      <section className="main_container   overflow-hidden  relative ">
+        <img
+          src={rectangles}
+          alt="rectangles in the background "
+          className="absolute bottom-[0%] left-0 w-[60px] "
+        />
+        <div className="main_container-left absolute  bottom-[50%] transform translate-y-[50%] ">
+          <h1 className="main_container-header capitalize break-words	font-bold text-center  text-[28px] md:text-[40px] lg:text-[70px] lg:w-[597px]  w-[50%]">
             Welcome to the world of <span className="text-primary">Nia</span>
           </h1>
-          <div className="input-wrapper w-[339px] md:w-[415px] lg:w-[555px]  mx-auto ms-5">
-            {" "}
+          <div className="input-wrapper w-[90.4%] md:w-[49.7%] lg:w-[80%]  mx-auto ms-5 lg:ms-10 my-5 absolute top-5 ">
             <input
               type="text"
               placeholder="Search..."
-              className="w-full p-2 rounded min-h-[44px] max-h-[60px]"
+              className="w-full p-2 rounded min-h-[44px] max-h-[60px] "
             />
-            <button onclick="alert('Button clicked!');" className="bg-red-400 ">
-              send
-            </button>{" "}
+            <button className="bg-red-400 ">send</button>
           </div>
         </div>
         <div className="main_container-right  max-h-[1024px]">
-          <img src={HomeImage} className="ms-auto  w-[80%]" />
+          <img src={HomeImage} className="ms-auto  w-[80%] lg:h-[100vh]" />
         </div>
       </section>
       <section className="about_brand ">
         <div className="line-movies">line-movies</div>
         <div className="about_brand-container">about_brand-container</div>
       </section>
-      <section className="service_container ">
+      <section className="service_container bg-stone-700 ">
         <div className="service_container-header">
           <h2>services</h2>
           <p>
@@ -46,7 +48,7 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <section className="rectangles ">
+      <section className="ourTeam">
         <img
           src={rectangles}
           alt="rectangles in the background "
@@ -57,7 +59,7 @@ const Home = () => {
             <h2 className="capitalize">
               {title} <span className="text-primary max-md:">{subTitle}</span>
             </h2>
-            <p className="p-line-hight text-dark text-[1rem] md:text-lg mt-4">
+            <p className="p-line-hight text-dark text-[1rem] md:text-lg mt-4 max-w-[912px]">
               {paragraph}
             </p>
           </div>
@@ -78,7 +80,7 @@ const Home = () => {
                           <img
                             src={member.image.src}
                             alt={member.image.alt}
-                            className="w-[180px] h-[160px] shadow-md mx-auto"
+                            className="min-w-[180px] lg:w-[193px] ourTeamImg  min-h-[160px] lg:h-[192px] shadow-md mx-auto"
                           />
                           <figcaption className="text-[22px] max-w-[14rem] md:text-[24px] lg:text-[28px] capitalize font-semibold text-center my-2">
                             {member.position}
@@ -105,9 +107,9 @@ const Home = () => {
                       >
                         <figure>
                           <img
-                            src={member.image?.src}
-                            alt={member.image?.alt}
-                            className="w-[180px] h-[160px] shadow-md mx-auto "
+                            src={member.image.src}
+                            alt={member.image.alt}
+                            className="min-w-[180px] lg:w-[193px] ourTeamImg  min-h-[160px] lg:h-[192px]   mx-auto "
                           />
                           <figcaption className="text-[22px] max-w-[14rem]  leading-normal md:text-[24px] lg:text-[28px] capitalize font-semibold  mx-auto text-center my-2">
                             {member?.position}
